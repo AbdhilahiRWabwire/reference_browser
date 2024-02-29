@@ -1,7 +1,7 @@
 [versions]
 
 # Android Components
-android-components = "124.0.20240217040249"
+android-components = "125.0.20240228040223"
 
 # AGP
 android-plugin = "8.2.2"
@@ -11,13 +11,13 @@ kotlinx-coroutines = "1.8.0"
 kotlin-compiler = "1.9.22"
 
 #Google
-compose-compiler = "1.5.9"
+compose-compiler = "1.5.10"
 material = "1.9.0"
 
 #AndroidX
 activity-compose = "1.7.2"
 appcompat = "1.6.1"
-compose = "1.6.1"
+composeBom = "2024.02.01"
 constraintlayout = "2.1.4"
 core = "1.12.0"
 lifecycle = "2.7.0"
@@ -31,10 +31,10 @@ androidx-espresso = "3.5.1"
 androidx-ext-junit = "1.1.5"
 androidx-orchestrator = "1.4.2"
 androidx-runner = "1.5.2"
-androidx-uiautomator = "2.2.0"
+androidx-uiautomator = "2.3.0"
 
 #Third Party
-sentry = "7.3.0"
+sentry = "7.4.0"
 
 # Third Party Linting & Static Code Analysis
 detekt = "1.23.5"
@@ -57,18 +57,21 @@ kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # AndroidX
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycle" }
 androidx-preference-ktx = { group = "androidx.preference", name = "preference-ktx", version.ref = "preference" }
 androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
-androidx-compose-ui-base = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
-androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
-androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "compose" }
-androidx-compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+
+# AndroidX Compose
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui-base = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-material = { group = "androidx.compose.material", name = "material" }
 
 # AndroidX Testing
 espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "androidx-espresso" }
