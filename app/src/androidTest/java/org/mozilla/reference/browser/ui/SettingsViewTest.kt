@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@file:Suppress("DEPRECATION")
-
 package org.mozilla.reference.browser.ui
 
 import androidx.core.net.toUri
@@ -73,7 +71,7 @@ class SettingsViewTest {
 
     // openFXAQrCodeTest tests that we get to the camera
     // Additional tests are needed to verify that the QR code reader works
-    @Ignore("Test instrumentation process is crashing, see: https://github.com/mozilla-mobile/reference-browser/issues/1502")
+    @Ignore("Test instrumentation process crash, see: https://github.com/mozilla-mobile/reference-browser/issues/1502")
     @Test
     fun openFXAQrCodeTest() {
         navigationToolbar {

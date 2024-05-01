@@ -1,6 +1,6 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
-* License, v. 2.0. If a copy of the MPL was not distributed with this
-* file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 package org.mozilla.reference.browser.ui.robots
 
@@ -34,7 +34,6 @@ class SettingsViewPrivacyRobot {
     }
 }
 
-private fun privacyUpButton() = Espresso.onView(ViewMatchers.withContentDescription("Navigate up"))
 private fun privacySettingsView() = Espresso.onView(ViewMatchers.withText("Privacy Settings"))
 private fun trackingProtectionHeading() = Espresso.onView(ViewMatchers.withText("Tracking Protection"))
 private fun tpEnableInNormalBrowsing() = Espresso.onView(ViewMatchers.withText("Enable in Normal Browsing Mode"))

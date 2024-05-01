@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@file:Suppress("ForbiddenComment")
+
 package org.mozilla.reference.browser.ui
 
 import androidx.test.platform.app.InstrumentationRegistry
@@ -240,7 +242,8 @@ class ThreeDotMenuTest {
         }
     }
 
-    // Verifies the Synced tabs menu opens from a tab's 3 dot menu and displays the correct view if the user isn't signed in
+    // Verifies the Synced tabs menu opens from a tab's 3 dot menu and
+    // displays the correct view if the user isn't signed in
     @Test
     fun openSyncedTabsTest() {
         val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)

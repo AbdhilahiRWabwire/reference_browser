@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@file:Suppress("TooManyFunctions")
-
 package org.mozilla.reference.browser.ui.robots
 
 import android.content.Context
@@ -72,8 +70,12 @@ class TabTrayMenuRobot {
             return NavigationToolbarRobot.Transition()
         }
 
-        fun openMoreOptionsMenu(context: Context, interact: TabTrayMoreOptionsMenuRobot.() -> Unit): TabTrayMoreOptionsMenuRobot.Transition {
-            // The 3dot "More options" button is actually an Android Options Menu (check tabstray_menu.xml) not a View that we treat as a menu
+        fun openMoreOptionsMenu(
+            context: Context,
+            interact: TabTrayMoreOptionsMenuRobot.() -> Unit,
+        ): TabTrayMoreOptionsMenuRobot.Transition {
+            // The 3dot "More options" button is actually an Android Options Menu (check tabstray_menu.xml),
+            // not a View that we treat as a menu
             openActionBarOverflowOrOptionsMenu(context)
 
             TabTrayMoreOptionsMenuRobot().interact()
