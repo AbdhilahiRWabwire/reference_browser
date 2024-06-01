@@ -2,15 +2,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply from: "$project.rootDir/automation/gradle/versionCode.gradle"
+plugins {
+    alias libs.plugins.android.application
+    alias libs.plugins.compose.compiler
+    alias libs.plugins.kotlin.android
+}
 
+apply from: "$project.rootDir/automation/gradle/versionCode.gradle"
 
 import com.android.build.api.variant.FilterConfiguration
 import com.android.build.gradle.internal.tasks.AppPreBuildTask
 import groovy.json.JsonOutput
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 android {
     defaultConfig {
@@ -42,10 +44,6 @@ android {
     buildFeatures {
         buildConfig true
         compose true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
 
     buildTypes {
@@ -98,14 +96,6 @@ android {
 
 kotlin {
     jvmToolchain(Config.jvmTargetCompatibility)
-}
-
-tasks.withType(KotlinCompile).configureEach {
-    kotlinOptions.allWarningsAsErrors = true
-    kotlinOptions.freeCompilerArgs += [
-            "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-            "-Xjvm-default=all"
-    ]
 }
 
 def baseVersionCode = generatedVersionCode
@@ -254,7 +244,7 @@ dependencies {
     implementation libs.androidx.fragment
     implementation libs.androidx.lifecycle.common
     implementation libs.androidx.lifecycle.process
-    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.lifecycle.viewmodel
     implementation libs.androidx.preference.ktx
     implementation libs.androidx.recyclerview
     implementation libs.androidx.swiperefreshlayout
