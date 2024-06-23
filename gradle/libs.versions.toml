@@ -1,9 +1,9 @@
 [versions]
 # Android Components
-android-components = "129.0.20240611221035"
+android-components = "129.0.20240621215457"
 
 # AGP
-android-gradle-plugin = "8.4.1"
+android-gradle-plugin = "8.4.2"
 
 # Kotlin
 kotlin = "2.0.0"
@@ -18,12 +18,12 @@ androidx-annotation = "1.8.0"
 androidx-appcompat = "1.7.0"
 androidx-browser = "1.8.0"
 androidx-cardview = "1.0.0"
-androidx-composeBom = "2024.05.00"
+androidx-composeBom = "2024.06.00"
 androidx-constraintlayout = "2.1.4"
 androidx-coordinatorlayout = "1.2.0"
 androidx-core = "1.13.1"
 androidx-fragment = "1.6.2"
-androidx-lifecycle = "2.8.1"
+androidx-lifecycle = "2.8.2"
 androidx-preference = "1.2.1"
 androidx-recyclerview = "1.3.2"
 androidx-swiperefreshlayout = "1.1.0"
