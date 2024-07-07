@@ -243,6 +243,7 @@ dependencies {
     implementation libs.androidx.core.ktx
     implementation libs.androidx.fragment
     implementation libs.androidx.lifecycle.common
+    implementation libs.androidx.lifecycle.compose
     implementation libs.androidx.lifecycle.process
     implementation libs.androidx.lifecycle.viewmodel
     implementation libs.androidx.preference.ktx
@@ -337,6 +338,12 @@ dependencies {
     implementation libs.mozilla.ui.icons
     implementation libs.mozilla.ui.tabcounter
     implementation libs.mozilla.ui.widgets
+
+    constraints {
+        implementation (libs.androidx.tracing) {
+            because 'AndroidX Test gets force-downgraded to 1.0.0 and breaks otherwise'
+        }
+    }
 
     androidTestImplementation libs.androidx.test.espresso.core
     androidTestImplementation libs.androidx.test.espresso.idling.resources
